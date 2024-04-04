@@ -14,7 +14,6 @@ class InspectionDataClass: ObservableObject {
     @Published var underCarInspection:[ChoiceStruct] = []
     @Published var tireInspection:[ChoiceStruct] = []
     @Published var multiPointInspection:[ChoiceStruct] = []
-    
     func saveArray(array:[ChoiceStruct], arrayTitle:String) {
         switch arrayTitle {
         case "general":

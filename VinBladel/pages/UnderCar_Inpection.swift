@@ -14,7 +14,7 @@ struct UnderCar_Inspection: View {
     var body: some View {
             VStack {
                 Text("Under Car Inspection")
-                    .font(.system(size: 27))
+                    .font(.system(size: 30))
                     .bold()
                     .padding()
                 Image("ColorsMeaning")
