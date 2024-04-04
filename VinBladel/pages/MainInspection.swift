@@ -10,6 +10,7 @@ import FirebaseDatabase
 import SwiftUI
 
 struct MainInspection: View {
+    @ObservedObject var firebaseClass = FirebaseClass()
     var body: some View {
         VStack {
             NavigationLink {
@@ -37,6 +38,15 @@ struct MainInspection: View {
             } label: {
                 Text("Tire Inspection")
             }
+            Button(action: {
+                firebaseClass.pullCurrentCar()
+            }, label: {
+                Text("Log currentCar To Console")
+            })
         }
     }
 }
+
+#Preview(body: {
+    MainInspection()
+})

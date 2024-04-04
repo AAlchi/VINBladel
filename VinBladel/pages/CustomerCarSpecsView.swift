@@ -35,6 +35,9 @@ struct CustomerCarSpecsView: View {
             Text("Mileage: \(customerCar.mileage)")
                 .font(.system(size: 20))
         }
+        .onAppear(perform: {
+            firebaseClass.setCurrentCar(car: customerCar)
+        })
         .navigationTitle("\(lastName), \(firstName)")
         .font(.system(size: 23))
     }

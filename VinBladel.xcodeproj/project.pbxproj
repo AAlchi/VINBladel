@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C188DAE42BBCFC100092D69C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C188DAE32BBCFC100092D69C /* GoogleService-Info.plist */; };
+		04A571732BBEFC2600993754 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04A571722BBEFC2600993754 /* GoogleService-Info.plist */; };
 		C1E0406E2BBCAB8F00A57FC0 /* VinBladelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E0406D2BBCAB8F00A57FC0 /* VinBladelApp.swift */; };
 		C1E040702BBCAB8F00A57FC0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E0406F2BBCAB8F00A57FC0 /* ContentView.swift */; };
 		C1E040752BBCAB9200A57FC0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1E040742BBCAB9200A57FC0 /* Preview Assets.xcassets */; };
@@ -64,7 +64,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C188DAE32BBCFC100092D69C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		04A571722BBEFC2600993754 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C1E0406A2BBCAB8F00A57FC0 /* VinBladel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VinBladel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1E0406D2BBCAB8F00A57FC0 /* VinBladelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VinBladelApp.swift; sourceTree = "<group>"; };
 		C1E0406F2BBCAB8F00A57FC0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -193,12 +193,12 @@
 				C1E040D92BBCB00A00A57FC0 /* PaymentPage.swift */,
 				C1E040D62BBCB00A00A57FC0 /* ScanVinPage.swift */,
 				C1E040D42BBCB00900A57FC0 /* Summary_Page.swift */,
+				04A571722BBEFC2600993754 /* GoogleService-Info.plist */,
 				C1E040E52BBCB01A00A57FC0 /* DataStruct.swift */,
 				C1E040E42BBCB01900A57FC0 /* TheObservedObject.swift */,
 				C1E040E62BBCB01A00A57FC0 /* ViewModel.swift */,
 				C1E040F12BBCECEC00A57FC0 /* ChoiceStruct.swift */,
 				C1E040842BBCAD2600A57FC0 /* InspectionDataClass.swift */,
-				C188DAE32BBCFC100092D69C /* GoogleService-Info.plist */,
 			);
 			path = pages;
 			sourceTree = "<group>";
@@ -290,7 +290,7 @@
 			files = (
 				C1E040802BBCAD0100A57FC0 /* Assets.xcassets in Resources */,
 				C1E040752BBCAB9200A57FC0 /* Preview Assets.xcassets in Resources */,
-				C188DAE42BBCFC100092D69C /* GoogleService-Info.plist in Resources */,
+				04A571732BBEFC2600993754 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,7 +463,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VinBladel/Preview Content\"";
-				DEVELOPMENT_TEAM = Q2M9ZXL8VG;
+				DEVELOPMENT_TEAM = 53573T622Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -492,7 +492,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VinBladel/Preview Content\"";
-				DEVELOPMENT_TEAM = Q2M9ZXL8VG;
+				DEVELOPMENT_TEAM = 53573T622Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

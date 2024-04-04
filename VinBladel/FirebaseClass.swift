@@ -17,7 +17,7 @@ class FirebaseClass: ObservableObject {
     @Published var currentPartWork:[partWork] = []
     @Published var currentPerson:customer = customer(addr1: "", addr2: "", city: "", country: "", email: "", firstName: "", homePhone: "", id: "", key: "", lastName: "", state: "", title: "", workPhone: "", zipCode: "")
     @Published var currentCar:vehicle = vehicle(customerID: "", engineDescription: "", makeDescription: "", mileage: "", modelDescription: "", numberOfCylinders: "", transmission: "", vin: "", vehicleID: "", vehicleDriveType: "", vehicleSubModel: "", year: "")
-    @State var currentID: String = ""
+    @Published var currentID: String = ""
     let ref = Database.database().reference()
     
     init() {
@@ -25,6 +25,17 @@ class FirebaseClass: ObservableObject {
         retrieveCustomerVehicles()
         retrieveParts()
         pullCurrentPart(carPart: "Alignment")
+    }
+    
+    func setCurrentCar(car: vehicle) {
+        self.currentCar = vehicle(customerID: car.customerID, engineDescription: car.engineDescription, makeDescription: car.makeDescription, mileage: car.mileage, modelDescription: car.modelDescription, numberOfCylinders: car.numberOfCylinders, transmission: car.transmission, vin: car.vin, vehicleID: car.vehicleID, vehicleDriveType: car.vehicleDriveType, vehicleSubModel: car.vehicleSubModel, year: car.year)
+        self.currentID = String(car.customerID)
+        print(currentCar)
+        print(currentID)
+    }
+    
+    func pullCurrentCar() {
+        print(currentCar)
     }
     
     func pullFromFirebase() {
