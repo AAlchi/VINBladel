@@ -26,7 +26,7 @@ struct ScanVinPage: View {
             accessCameraView(selectedImage: self.$imageSelected)
         }
         
-        if let imageSelected{
+        if let imageSelected {
             Image(uiImage: imageSelected)
                 .resizable()
                 .scaledToFit()
