@@ -14,7 +14,7 @@ struct Tire_Inspection: View {
     var body: some View {
             VStack {
                 Text("Tire Inspection")
-                    .font(.system(size: 27))
+                    .font(.system(size: 30))
                     .bold()
                     .padding()
                 Image("ColorsMeaning")
