@@ -25,6 +25,7 @@ struct HomeScreen: View {
                             .foregroundStyle(Color.white)
                             .clipShape(RoundedRectangle(cornerRadius: 3.0))
                             .bold()
+                            .font(.system(size: 30, design: .default))
                     }
                     NavigationLink(destination: ManualVinPage()) {
                         Text("Enter Vin")
@@ -34,6 +35,7 @@ struct HomeScreen: View {
                             .foregroundStyle(Color.white)
                             .clipShape(RoundedRectangle(cornerRadius: 3.0))
                             .bold()
+                            .font(.system(size: 30, design: .default))
                     }
                     NavigationLink(destination: CustomerListView()) {
                         Text("Customer List")
@@ -43,6 +45,7 @@ struct HomeScreen: View {
                             .foregroundStyle(Color.white)
                             .clipShape(RoundedRectangle(cornerRadius: 3.0))
                             .bold()
+                            .font(.system(size: 30, design: .default))
                     }
                 }
                 .padding(.bottom)

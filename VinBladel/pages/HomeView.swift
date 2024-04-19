@@ -18,8 +18,8 @@ struct HomeView: View {
                 
             } label: {
                 Text("Scan Vin")
-                    .frame(width: 250, height: 200)
-                    .font(.system(size: 65, design: .default))
+                    .frame(width: 200, height: 100)
+                    .font(.system(size: 30, design: .default))
             }
             }
         NavigationLink(destination: ManualVinPage()) {
@@ -27,8 +27,8 @@ struct HomeView: View {
                 
             } label: {
                 Text("Manually Input VIN")
-                    .frame(width: 250, height: 200)
-                    .font(.system(size: 65, design: .default))
+                    .frame(width: 200, height: 100)
+                    .font(.system(size: 30, design: .default))
             }
         }
         NavigationLink(destination: CustomerListView()) {
@@ -36,8 +36,8 @@ struct HomeView: View {
                 
             } label: {
                 Text("Search By Name")
-                    .frame(width: 250, height: 200)
-                    .font(.system(size: 65, design: .default))
+                    .frame(width: 200, height: 100)
+                    .font(.system(size: 30, design: .default))
             }
 
         }
