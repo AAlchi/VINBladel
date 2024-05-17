@@ -9,7 +9,7 @@ import SwiftUI
 import FirebaseDatabase
 
 struct CustomerListView: View {
-    @ObservedObject var firebaseClass = FirebaseClass()
+    @EnvironmentObject var firebaseClass: FirebaseClass
     @State var listText: String = ""
     var body: some View {
         NavigationStack {
