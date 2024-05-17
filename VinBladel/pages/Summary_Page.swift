@@ -11,7 +11,7 @@ import FirebaseDatabase
 
 struct Summary_Page: View {
     let clientEmail: String
-    @ObservedObject var firebaseClass = FirebaseClass()
+    @EnvironmentObject var firebaseClass: FirebaseClass
     var body: some View {
         NavigationStack {
             GeometryReader { geo in

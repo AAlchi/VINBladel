@@ -10,7 +10,7 @@ import FirebaseDatabase
 import SwiftUI
 
 struct MainInspection: View {
-    @ObservedObject var firebaseClass = FirebaseClass()
+    @EnvironmentObject var firebaseClass: FirebaseClass
     var body: some View {
         VStack {
             NavigationLink {

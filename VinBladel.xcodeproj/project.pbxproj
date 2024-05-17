@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		046D44D12BF7A7E300E19E8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D44D02BF7A7E300E19E8C /* AppDelegate.swift */; };
 		04A571732BBEFC2600993754 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04A571722BBEFC2600993754 /* GoogleService-Info.plist */; };
 		C1E0406E2BBCAB8F00A57FC0 /* VinBladelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E0406D2BBCAB8F00A57FC0 /* VinBladelApp.swift */; };
 		C1E040702BBCAB8F00A57FC0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E0406F2BBCAB8F00A57FC0 /* ContentView.swift */; };
@@ -64,6 +65,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		046D44D02BF7A7E300E19E8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04A571722BBEFC2600993754 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C1E0406A2BBCAB8F00A57FC0 /* VinBladel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VinBladel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1E0406D2BBCAB8F00A57FC0 /* VinBladelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VinBladelApp.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			children = (
 				C1E040F02BBCEC8300A57FC0 /* pages */,
 				C1E0406D2BBCAB8F00A57FC0 /* VinBladelApp.swift */,
+				046D44D02BF7A7E300E19E8C /* AppDelegate.swift */,
 				C1E0406F2BBCAB8F00A57FC0 /* ContentView.swift */,
 				C1E040812BBCAD0F00A57FC0 /* FirebaseClass.swift */,
 				C1E0407F2BBCAD0100A57FC0 /* Assets.xcassets */,
@@ -319,6 +322,7 @@
 				C1E040E12BBCB00B00A57FC0 /* InvoicePage.swift in Sources */,
 				C1E040DF2BBCB00B00A57FC0 /* InspectionItemView.swift in Sources */,
 				C1E040E72BBCB01A00A57FC0 /* ViewModel.swift in Sources */,
+				046D44D12BF7A7E300E19E8C /* AppDelegate.swift in Sources */,
 				C1E040C32BBCAFCE00A57FC0 /* HomeScreen.swift in Sources */,
 				C1E040BF2BBCAFCE00A57FC0 /* CustomerCarSpecsView.swift in Sources */,
 				C1E040C22BBCAFCE00A57FC0 /* CustomerCarsView.swift in Sources */,

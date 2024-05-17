@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CustomerCarSpecsView: View {
     let customerCar:vehicle
-    @ObservedObject var firebaseClass = FirebaseClass()
+    @EnvironmentObject var firebaseClass: FirebaseClass
     let firstName: String
     let lastName: String
     var body: some View {

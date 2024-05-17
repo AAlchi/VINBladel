@@ -10,7 +10,7 @@ import FirebaseDatabase
 
 struct PaymentPage: View {
     let ref = Database.database().reference()
-    @ObservedObject var firebaseClass = FirebaseClass()
+    @EnvironmentObject var firebaseClass: FirebaseClass
     @State var currentPart: String = ""
     @State var parts:[partItem] = []
     @State var showingAlert: Bool = false

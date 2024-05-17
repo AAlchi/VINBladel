@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ManualVinPage: View {
     @State var carVin: String = ""
-    @ObservedObject var firebaseClass = FirebaseClass()
+    @EnvironmentObject var firebaseClass: FirebaseClass
     var body: some View {
         GeometryReader { geo in
             VStack {

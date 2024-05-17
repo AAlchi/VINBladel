@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var firebaseClass = FirebaseClass()
+    @State var firebaseClass:FirebaseClass = FirebaseClass()
     var body: some View {
-        HomeScreen() 
+        HomeScreen()
+            .environmentObject(firebaseClass)
     }
 }
 
