@@ -10,11 +10,21 @@ import SwiftUI
 import PhotosUI
 
 struct ScanVinPage: View {
+    var image: CGImage?
+    private let label = Text("frame")
     @State private var showCamera = false
     @State private var imageSelected: UIImage?
-    @State var image: UIImage?
+  //  @State var image: UIImage?
     
     var body: some View {
+        if let image = image {
+            Image(image, scale: 1.0, orientation: .up, label: label)
+        } else {
+            Color.black
+        }
+        
+        
+        
         Text("Scan VIN Page")
             .font(.system(size: 30))
         Button {
