@@ -22,7 +22,8 @@ struct ScanVinPage: View {
         } else {
             Color.black
         }
-        
+        CameraOther(image: model.)
+            .ignoredSafeArea()
         
         
         Text("Scan VIN Page")
