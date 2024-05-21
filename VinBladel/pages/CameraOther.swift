@@ -6,8 +6,9 @@
 //
 
 import AVFoundation
+import CoreImage
 
-class CameraOther: ObservableObject{
+class CameraOther: NSObject, ObservableObject{
     @Published var frame: CGImage?
     private var permissionGranted = false
     private let captureSession = AVCaptureSession()

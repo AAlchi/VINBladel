@@ -11,19 +11,14 @@ import PhotosUI
 
 struct ScanVinPage: View {
     var image: CGImage?
-    private let label = Text("frame")
     @State private var showCamera = false
     @State private var imageSelected: UIImage?
-  //  @State var image: UIImage?
+      //  @State var image: UIImage?
+    @StateObject private var model = CameraOther()
     
     var body: some View {
-        if let image = image {
-            Image(image, scale: 1.0, orientation: .up, label: label)
-        } else {
-            Color.black
-        }
-        CameraOther(image: model.frame)
-            .ignoredSafeArea()
+        CameraView(image: model.frame)
+   
         
         
         Text("Scan VIN Page")
