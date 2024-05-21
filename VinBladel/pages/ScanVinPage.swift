@@ -22,7 +22,7 @@ struct ScanVinPage: View {
         } else {
             Color.black
         }
-        CameraOther(image: model.)
+        CameraOther(image: model.frame)
             .ignoredSafeArea()
         
         

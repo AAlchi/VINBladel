@@ -12,7 +12,7 @@ class CameraOther: ObservableObject{
     private var permissionGranted = false
     private let captureSession = AVCaptureSession()
     private let sessionQueue = DispatchQueue(label: "sessionQueue")
-    
+    private let context = CIContext()
     
     
   override init() {
