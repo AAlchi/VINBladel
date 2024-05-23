@@ -10,7 +10,6 @@ import FirebaseDatabase
 import SwiftUI
 
 struct Tire_Inspection: View {
-    @State var inspectionList: [String] = ["Left Front", "Left Rear", "Right Front", "Right Rear", "Spare", "Tire Maintenance", "Alignment Check"]
     var body: some View {
             VStack {
                 Text("Tire Inspection")
@@ -22,7 +21,7 @@ struct Tire_Inspection: View {
                     .frame(width: 900, height: 90)
                     .padding()
                 ScrollView {
-                    InspectionList(inspectionList: inspectionList, arrayTitle: "tire")
+                    InspectionList(arrayTitle: "tire")
                 } 
             }
     }

@@ -29,6 +29,9 @@ struct CustomerListView: View {
                         CustomerCarsView(currentCustomer: Customer)
                             .font(.system(size: 25))
                     }
+                    .onTapGesture {
+                        firebaseClass.currentPerson = Customer
+                    }
                 }
             }
             .searchable(text: $listText)

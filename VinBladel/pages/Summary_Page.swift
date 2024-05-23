@@ -74,7 +74,7 @@ struct Summary_Page: View {
                                         .bold()
                                 }
                                 Spacer()
-                                EmailView(clientEmail: clientEmail)
+                                EmailView()
                                     .frame(width: geo.size.width * 0.3, height: 20)
                                     .padding()
                                     .background(.orange)

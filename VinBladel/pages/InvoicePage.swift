@@ -8,10 +8,15 @@
 import SwiftUI
 
 struct InvoicePage: View {
+    @EnvironmentObject var inspectionDataClass:InspectionDataClass
     var body: some View {
-        Text("Invoice")
+        VStack {
+            
+        }
     }
 }
+
+
 
 #Preview {
     InvoicePage()

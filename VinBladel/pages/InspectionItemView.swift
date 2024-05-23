@@ -10,9 +10,11 @@ import SwiftUI
 
 struct InspectionItem: View {
     let title: String
+    let index: Int
+    let arrayTitle: String
     @State var notesField: String = ""
-    @State var buttonStates:[Bool] = [false, false, false]
-    @Binding var choices:[ChoiceStruct]
+    @State var choices = ["OK", "SUG", "REQ"]
+    @EnvironmentObject var inspectionDataClass: InspectionDataClass
     var body: some View {
         HStack {
             HStack {
@@ -20,24 +22,21 @@ struct InspectionItem: View {
                     .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 15))
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .font(.title)
-                ForEach(buttonStates.indices, id: \.self) { index in
-                    InspectionButton(buttonState: buttonStates[index], buttonNumber: index)
-                        .onTapGesture {
-                            switch index {
-                            case 0:
-                                buttonStates = [true, false, false]
-                                sendStateBack(choice: "OK")
-                            case 1:
-                                buttonStates = [false, true, false]
-                                sendStateBack(choice: "SUG")
-                            case 2:
-                                buttonStates = [false, false, true]
-                                sendStateBack(choice: "REQ")
-                            default:
-                                buttonStates = [false, false, false]
-                                print("ERROR")
-                            }
+                ForEach(choices, id: \.self) { choice in
+                    ZStack {
+                        Button {
+                            inspectionDataClass.updateArrays(array: arrayTitle, index: index, newState: choice)
+                        } label: {
+                            Rectangle()
+                                .stroke(lineWidth: 2)
+                                .frame(width: 25, height: 25)
+                                .foregroundStyle(returnColor(choice: choice))
                         }
+                        if inspectionDataClass.returnArray(array: arrayTitle)[index].choice == choice {
+                            Text("X")
+                                .foregroundStyle(.black)
+                        }
+                    }
                 }
                 TextField("Notes", text: $notesField)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -49,41 +48,18 @@ struct InspectionItem: View {
             .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
         }
     }
-    func sendStateBack(choice: String) {
-        for index in choices.indices {
-            if choices[index].title == title {
-                choices[index].choice = choice
-            }
+    func returnColor(choice: String) -> Color {
+        switch choice {
+        case "OK":
+            return Color.green
+        case "SUG":
+            return Color.orange
+        case "REQ":
+            return Color.red
+        default:
+            return Color.red
         }
     }
 }
 
-struct InspectionButton: View {
-    let buttonState: Bool
-    let buttonNumber: Int
-    var body: some View {
-        ZStack {
-            Rectangle()
-                .frame(width: 30, height: 30)
-                .foregroundStyle(buttonColor())
-            Rectangle()
-                .frame(width: 25, height: 25)
-                .foregroundStyle(.white)
-            Image(systemName: buttonState ? "xmark" : "")
-                .resizable()
-                .frame(width: 10, height: 10)
-        }
-    }
-    func buttonColor() -> Color {
-        switch buttonNumber {
-        case 0:
-            return .green
-        case 1:
-            return .yellow
-        case 2:
-            return .red
-        default:
-            return .black
-        }
-    }
-}
+

@@ -68,6 +68,7 @@ struct accessCameraView: UIViewControllerRepresentable {
     func makeCoordinator() -> Coordinator {
         return Coordinator(picker: self)
     }
+    
 }
 
 #Preview {

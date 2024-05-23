@@ -29,11 +29,11 @@ class MailComposeViewController: UIViewController, MFMailComposeViewControllerDe
     }
 }
 
-struct EmailView: View {     
-    let clientEmail: String
+struct EmailView: View {
+    @EnvironmentObject var firebaseClass: FirebaseClass
     var body: some View {
         Button(action: {
-            MailComposeViewController.shared.sendEmail(clientEmail: clientEmail)
+            MailComposeViewController.shared.sendEmail(clientEmail: firebaseClass.currentPerson.email)
         }, label: {
             Text("Send")
         })

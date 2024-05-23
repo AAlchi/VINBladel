@@ -1,6 +1,7 @@
 import SwiftUI
 
-struct ChoiceStruct {
+struct ChoiceStruct: Hashable {
+    let id = UUID()
     let title: String
     var choice: String
 }

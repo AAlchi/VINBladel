@@ -11,44 +11,23 @@ import SwiftUI
 
 struct MainInspection: View {
     @EnvironmentObject var firebaseClass: FirebaseClass
+    @EnvironmentObject var inspectionDataClass: InspectionDataClass
     var body: some View {
         VStack {
-            NavigationLink {
+            switch inspectionDataClass.curView {
+            case 0:
                 General_Inspection()
-            } label: {
-                Text("General Inspection")
-                    .font(.system(size: 30))
-            }
-            NavigationLink {
+            case 1:
                 Brakes_Inspection()
-            } label: {
-                Text("Brakes Inspection")
-                    .font(.system(size: 30))
-            }
-            NavigationLink {
+            case 2:
                 UnderCar_Inspection()
-            } label: {
-                Text("Under Car Inspection")
-                    .font(.system(size: 30))
-            }
-            NavigationLink {
+            case 3:
                 MultiPoint_Inspection()
-            } label: {
-                Text("Multi Point Inspection")
-                    .font(.system(size: 30))
-            }
-            NavigationLink {
+            case 4:
                 Tire_Inspection()
-            } label: {
-                Text("Tire Inspection")
-                    .font(.system(size: 30))
+            default:
+                Text("Error")
             }
-            Button(action: {
-                firebaseClass.pullCurrentCar()
-            }, label: {
-                Text("Log currentCar To Console")
-                    .font(.system(size: 30))
-            })
         }
     }
 }

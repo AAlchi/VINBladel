@@ -9,10 +9,9 @@ import Foundation
 import SwiftUI
 
 struct InspectionList: View {
-    let inspectionList:[String]
     let arrayTitle: String
     @State var inspectionChoices:[ChoiceStruct] = []
-    @ObservedObject var inspectionData = InspectionDataClass()
+    @EnvironmentObject var inspectionDataClass: InspectionDataClass
     var body: some View {
         VStack {
             HStack {
@@ -30,36 +29,43 @@ struct InspectionList: View {
             }
             .font(.subheadline)
             .font(.caption)
-            ForEach(inspectionList, id: \.self) { item in
-                InspectionItem(title: item, choices: $inspectionChoices)
+            ForEach(inspectionDataClass.returnArray(array: arrayTitle), id: \.self) { item in
+                InspectionItem(title: item.title, index: inspectionDataClass.returnArray(array: arrayTitle).firstIndex(of: item) ?? 0, arrayTitle: arrayTitle)
             }
-            Button(action: {
-                inspectionData.saveArray(array: inspectionChoices, arrayTitle: arrayTitle)
-            }, label: {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 10.0)
-                        .frame(width: 100, height: 35)
-                        .foregroundStyle(.orange)
-                    Text("Save")
-                        .foregroundStyle(.white)
-                        .bold()
-                }
-            })
+            HStack {
+                Button(action: {
+                    if inspectionDataClass.curView - 1 > -1 {
+                        inspectionDataClass.curView = inspectionDataClass.curView - 1
+                    }
+                }, label: {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10.0)
+                            .frame(width: 100, height: 35)
+                            .foregroundStyle(.orange)
+                        Text("Back")
+                            .foregroundStyle(.white)
+                            .bold()
+                    }
+                })
+                Button(action: {
+                    if inspectionDataClass.curView + 1 < 5 {
+                        inspectionDataClass.curView = inspectionDataClass.curView + 1
+                    }
+                }, label: {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10.0)
+                            .frame(width: 100, height: 35)
+                            .foregroundStyle(.orange)
+                        Text("Next")
+                            .foregroundStyle(.white)
+                            .bold()
+                    }
+                })
+            }
         }
-        .onAppear(perform: {
-            inspectionChoices = createArray()
-            print(inspectionChoices)
-        })
-    }
-    func createArray() -> [ChoiceStruct] {
-    var newArray:[ChoiceStruct] = []
-        for item in inspectionList {
-            newArray.append(ChoiceStruct(title: item, choice: "null"))
-        }
-        return newArray
     }
 }
 
 #Preview {
-    InspectionList(inspectionList: ["null", "null"], arrayTitle: "null")
+    InspectionList(arrayTitle: "null")
 } 
