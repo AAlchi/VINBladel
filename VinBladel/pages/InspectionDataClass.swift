@@ -15,11 +15,17 @@ class InspectionDataClass: ObservableObject {
         createArrays()
     }
     func createArrays() {
+        
         let generalItems = ["Wiper Blades", "Head Lights", "Mini Lights", "Air Filter", "Cabin Air Filter", "PCV Value", "Washer Fluid", "Engine Oil", "Power Steering Fluid", "Master Cyl. Fluid Level", "Brake Fluid", "Coolant Hoses", "Engine Coolant", "Battery Test", "Battery Accessories", "Start/Charge", "Belts", "Belt Tensioner", "Spark Plugs", "Fuel Filter", "Ignition  Wires", "Valve Cover Gasket", "Power Steering Hose", "Timing Belt", "Transfer Case/Differential Fluid", "Transmission Fluid"]
+        
         let tireItems = ["Left Front", "Left Rear", "Right Front", "Right Rear", "Spare", "Tire Maintenance", "Alignment Check"]
+        
         let multiPointItems = ["Wiper Blades", "Head Lights", "Mini Lights", "Air Filter", "Cabin Air Filter", "PCV Value", "Washer Fluid", "Engine Oil", "Power Steering Fluid", "Master Cyl. Fluid Level", "Brake Fluid", "Coolant Hoses", "Engine Coolant"]
+        
         let underCarItems = ["Exhaust Sytem", "U-Joint", "Idler/Pitman Arm", "Center Link", "Bushings", "Link Pins", "Tie Rod Ends", "Ball Joints", "Rack & Pinion Assembly", "CV Boots/Joints", "Wheel Bearings", "Struts", "Shocks", "Wiper"]
+        
         let brakesItems = ["LF Pad", "LR Pad/Shoe", "Rear Clean/Adj", "Brake Hose(s)", "Parking Cables", "Other Brake Services", "LF Rotor / RF Rotor", "Drum LR Rotor / Drum RR Rotor", "RF Pad", "RR Pad"]
+        
         for i in generalItems {
             inspectionData.general.append(ChoiceStruct(title: i, choice: "OK"))
         }
