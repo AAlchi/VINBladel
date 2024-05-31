@@ -21,15 +21,6 @@ struct Summary_Page: View {
                             .bold()
                             .font(.system(size: 27))
                             .padding(.bottom)
-                        
-                        Text("Your Data (Sample)")
-                            .bold()
-                        List {
-                            ForEach(firebaseClass.customers, id: \.self) { Customer in
-                                Text("\(Customer.firstName)")
-                            }
-                        }
-                        .listStyle(PlainListStyle())
                     }
                     .padding(.top)
                     VStack {
