@@ -21,7 +21,6 @@ struct Summary_Page: View {
                             .bold()
                             .font(.system(size: 27))
                             .padding(.bottom)
-                        
                     }
                     .padding(.top)
                     VStack {

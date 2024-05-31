@@ -25,7 +25,7 @@ struct InspectionList: View {
                     .foregroundStyle(.red)
                 Spacer()
                     .frame(width: 135)
-                Text("Why Recommend")
+                Text("Notes")
             }
             .font(.subheadline)
             .font(.caption)
