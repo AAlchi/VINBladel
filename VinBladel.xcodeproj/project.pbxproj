@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		046D44D12BF7A7E300E19E8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D44D02BF7A7E300E19E8C /* AppDelegate.swift */; };
 		04A571732BBEFC2600993754 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04A571722BBEFC2600993754 /* GoogleService-Info.plist */; };
-		B13B69252BFCF652004B76DE /* CameraOther.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13B69242BFCF652004B76DE /* CameraOther.swift */; };
-		B1DE61AE2BFF9651004B09E7 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DE61AD2BFF9651004B09E7 /* CameraView.swift */; };
+		B13B69252BFCF652004B76DE /* FrameHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13B69242BFCF652004B76DE /* FrameHandler.swift */; };
+		B1DE61AE2BFF9651004B09E7 /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DE61AD2BFF9651004B09E7 /* FrameView.swift */; };
 		B1DE61B02BFF9A7B004B09E7 /* Recongnition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DE61AF2BFF9A7B004B09E7 /* Recongnition.swift */; };
 		C1E0406E2BBCAB8F00A57FC0 /* VinBladelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E0406D2BBCAB8F00A57FC0 /* VinBladelApp.swift */; };
 		C1E040702BBCAB8F00A57FC0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E0406F2BBCAB8F00A57FC0 /* ContentView.swift */; };
@@ -70,8 +70,8 @@
 /* Begin PBXFileReference section */
 		046D44D02BF7A7E300E19E8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04A571722BBEFC2600993754 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		B13B69242BFCF652004B76DE /* CameraOther.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraOther.swift; sourceTree = "<group>"; };
-		B1DE61AD2BFF9651004B09E7 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		B13B69242BFCF652004B76DE /* FrameHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameHandler.swift; sourceTree = "<group>"; };
+		B1DE61AD2BFF9651004B09E7 /* FrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameView.swift; sourceTree = "<group>"; };
 		B1DE61AF2BFF9A7B004B09E7 /* Recongnition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recongnition.swift; sourceTree = "<group>"; };
 		C1E0406A2BBCAB8F00A57FC0 /* VinBladel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VinBladel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1E0406D2BBCAB8F00A57FC0 /* VinBladelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VinBladelApp.swift; sourceTree = "<group>"; };
@@ -202,8 +202,8 @@
 				C1E040D92BBCB00A00A57FC0 /* PaymentPage.swift */,
 				C1E040D62BBCB00A00A57FC0 /* ScanVinPage.swift */,
 				B1DE61AF2BFF9A7B004B09E7 /* Recongnition.swift */,
-				B1DE61AD2BFF9651004B09E7 /* CameraView.swift */,
-				B13B69242BFCF652004B76DE /* CameraOther.swift */,
+				B1DE61AD2BFF9651004B09E7 /* FrameView.swift */,
+				B13B69242BFCF652004B76DE /* FrameHandler.swift */,
 				C1E040D42BBCB00900A57FC0 /* Summary_Page.swift */,
 				04A571722BBEFC2600993754 /* GoogleService-Info.plist */,
 				C1E040E52BBCB01A00A57FC0 /* DataStruct.swift */,
@@ -316,7 +316,7 @@
 				C1E040EF2BBCB14000A57FC0 /* Brakes_Inspection.swift in Sources */,
 				C1E040EE2BBCB14000A57FC0 /* General_Inspection.swift in Sources */,
 				C1E040EA2BBCB14000A57FC0 /* MainInspection.swift in Sources */,
-				B13B69252BFCF652004B76DE /* CameraOther.swift in Sources */,
+				B13B69252BFCF652004B76DE /* FrameHandler.swift in Sources */,
 				C1E040E02BBCB00B00A57FC0 /* ManualVinPage.swift in Sources */,
 				C1E040852BBCAD2600A57FC0 /* InspectionDataClass.swift in Sources */,
 				C1E040702BBCAB8F00A57FC0 /* ContentView.swift in Sources */,
@@ -328,7 +328,7 @@
 				C1E040822BBCAD0F00A57FC0 /* FirebaseClass.swift in Sources */,
 				C1E040BD2BBCAFCE00A57FC0 /* CustomerTabs.swift in Sources */,
 				C1E040C02BBCAFCE00A57FC0 /* CustomerListView.swift in Sources */,
-				B1DE61AE2BFF9651004B09E7 /* CameraView.swift in Sources */,
+				B1DE61AE2BFF9651004B09E7 /* FrameView.swift in Sources */,
 				C1E040ED2BBCB14000A57FC0 /* Tire_Inspection.swift in Sources */,
 				C1E040E12BBCB00B00A57FC0 /* InvoicePage.swift in Sources */,
 				C1E040DF2BBCB00B00A57FC0 /* InspectionItemView.swift in Sources */,
@@ -479,7 +479,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VinBladel/Preview Content\"";
-				DEVELOPMENT_TEAM = 9F53D3M6K3;
+				DEVELOPMENT_TEAM = NKRNY7R575;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Camera required for preview";
@@ -493,7 +493,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.d214.Vin-Bladel";
+				PRODUCT_BUNDLE_IDENTIFIER = "Jibbie.d214.Vin-Bladel";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -509,7 +509,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VinBladel/Preview Content\"";
-				DEVELOPMENT_TEAM = 9F53D3M6K3;
+				DEVELOPMENT_TEAM = NKRNY7R575;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Camera required for preview";
@@ -523,7 +523,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.d214.Vin-Bladel";
+				PRODUCT_BUNDLE_IDENTIFIER = "Jibbie.d214.Vin-Bladel";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

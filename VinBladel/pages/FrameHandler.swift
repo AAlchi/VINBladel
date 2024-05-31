@@ -1,25 +1,18 @@
-//
-//  CameraOther.swift
-//  VinBladel
-//
-//  Created by James Balek on 5/21/24.
-//
-
+import Foundation
 import AVFoundation
 import CoreImage
 
-class CameraOther: NSObject, ObservableObject{
+class FrameHandler: NSObject, ObservableObject {
     @Published var frame: CGImage?
     private var permissionGranted = false
     private let captureSession = AVCaptureSession()
     private let sessionQueue = DispatchQueue(label: "sessionQueue")
     private let context = CIContext()
     
-    
-  override init() {
-      super.init()
+    override init() {
+        super.init()
         checkPermission()
-        sessionQueue.sync { [unowned self] in
+        sessionQueue.async { [unowned self] in
             self.setupCaptureSession()
             self.captureSession.startRunning()
         }
@@ -29,10 +22,8 @@ class CameraOther: NSObject, ObservableObject{
         switch AVCaptureDevice.authorizationStatus(for: .video) {
         case .authorized:
             permissionGranted = true
-            
         case .notDetermined:
             requestPermission()
-            
         default:
             permissionGranted = false
         }
@@ -41,7 +32,6 @@ class CameraOther: NSObject, ObservableObject{
     func requestPermission() {
         AVCaptureDevice.requestAccess(for: .video) { [unowned self] granted in
             self.permissionGranted = granted
-            
         }
     }
     
@@ -49,24 +39,23 @@ class CameraOther: NSObject, ObservableObject{
         let videoOutput = AVCaptureVideoDataOutput()
         
         guard permissionGranted else { return }
-        guard let videoDevice = AVCaptureDevice.default(.builtInDualWideCamera, for: .video, position: .back) else { return }
+        guard let videoDevice =  AVCaptureDevice.default(.builtInDualWideCamera, for: .video, position: .back) else { return }
         guard let videoDeviceInput = try? AVCaptureDeviceInput(device: videoDevice) else { return }
         guard captureSession.canAddInput(videoDeviceInput) else { return }
         captureSession.addInput(videoDeviceInput)
         
-        videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "sampleBuffQueue"))
+        videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "sampleBufferQueue"))
         captureSession.addOutput(videoOutput)
         videoOutput.connection(with: .video)?.videoOrientation = .portrait
     }
 }
 
-extension CameraOther: AVCaptureVideoDataOutputSampleBufferDelegate {
-    func captureOutput(_ output: AVCaptureOutput, didDrop sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+extension FrameHandler: AVCaptureVideoDataOutputSampleBufferDelegate {
+    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         guard let cgImage = imageFromSampleBuffer(sampleBuffer: sampleBuffer) else { return }
         
-        DispatchQueue.main.async { [unowned self ] in
+        DispatchQueue.main.async { [unowned self] in
             self.frame = cgImage
-            
         }
     }
     

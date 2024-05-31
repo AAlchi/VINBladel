@@ -14,18 +14,11 @@ struct ScanVinPage: View {
 //    @State private var showCamera = false
 //    @State private var imageSelected: UIImage?
       //  @State var image: UIImage?
-    @StateObject private var model = CameraOther()
+    @StateObject private var model = FrameHandler()
     
     var body: some View {
-        CameraView(image: model.frame!)
-   
-        
-        
-        Text("Scan VIN Page")
-            .font(.system(size: 30))
-        Button("Take") {
-            
-        }
+        FrameView(image: model.frame)
+            .ignoresSafeArea()
 //        .fullScreenCover(isPresented: self.$showCamera) {
 //            accessCameraView(selectedImage: self.$imageSelected)
 //        }
