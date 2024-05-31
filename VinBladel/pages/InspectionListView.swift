@@ -41,7 +41,7 @@ struct InspectionList: View {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10.0)
                             .frame(width: 100, height: 35)
-                            .foregroundStyle(.orange)
+                            .foregroundStyle(inspectionDataClass.curView - 1 == -1 ? Color.gray : Color.orange)
                         Text("Back")
                             .foregroundStyle(.white)
                             .bold()
@@ -55,7 +55,7 @@ struct InspectionList: View {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10.0)
                             .frame(width: 100, height: 35)
-                            .foregroundStyle(.orange)
+                            .foregroundStyle(inspectionDataClass.curView + 1 == 5 ? .gray : .orange)
                         Text("Next")
                             .foregroundStyle(.white)
                             .bold()
