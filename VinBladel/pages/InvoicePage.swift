@@ -11,6 +11,8 @@ struct InvoicePage: View {
     @EnvironmentObject var inspectionDataClass:InspectionDataClass
     var body: some View {
         VStack {
+            Text("Invoice Page")
+            Text("To add more, go to the inpection page")
             ForEach(inspectionDataClass.inspectionData.general, id: \.self) { item in
                 if item.choice != "OK" {
                     Text("\(item.title): \(item.choice)")
@@ -41,6 +43,7 @@ struct InvoicePage: View {
                         .foregroundStyle(item.choice == "SUG" ? .orange : .red)
                 }
             }
+            EmailView()
         }
     }
 }
