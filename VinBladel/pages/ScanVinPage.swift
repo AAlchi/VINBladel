@@ -14,7 +14,7 @@ struct ScanVinPage: View {
 //    @State private var showCamera = false
 //    @State private var imageSelected: UIImage?
       //  @State var image: UIImage?
-    @StateObject private var model = FrameView()
+    @StateObject private var model = FrameHandler()
     
     var body: some View {
         FrameView(image: model.frame)
