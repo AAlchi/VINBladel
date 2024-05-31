@@ -17,14 +17,14 @@ struct ScanVinPage: View {
     @StateObject private var model = CameraOther()
     
     var body: some View {
-        CameraView(image: model.frame)
+        CameraView(image: model.frame!)
    
         
         
         Text("Scan VIN Page")
             .font(.system(size: 30))
         Button("Take") {
-            model.frame!
+            
         }
 //        .fullScreenCover(isPresented: self.$showCamera) {
 //            accessCameraView(selectedImage: self.$imageSelected)
